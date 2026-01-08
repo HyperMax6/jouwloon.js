@@ -1,0 +1,41 @@
+{
+   "name": "jouwloon",
+   "version": "1.0.0",
+   "description": "A small helper that logs into Jouwloon.nl and fetches your shifts.",
+   "keywords": [
+      "jouwloon",
+      "shifts",
+      "calendar"
+   ],
+   "homepage": "https://github.com/HyperMax6/Jouwloon-JS",
+   "bugs": {
+      "url": "https://github.com/HyperMax6/Jouwloon-JS/issues"
+   },
+   "license": "MIT",
+   "author": "Max Swart <maxverschoor2008@gmail.com>",
+   "type": "module",
+   "main": "dist/index.js",
+   "types": "dist/index.d.ts",
+   "files": [
+      "dist"
+   ],
+   "scripts": {
+      "build": "rollup -c",
+      "prepublishOnly": "npm run build",
+      "test": "echo \"No tests yet\""
+   },
+   "dependencies": {
+      "@rollup/plugin-json": "^6.1.0",
+      "axios": "^1.6.0",
+      "axios-cookiejar-support": "^4.0.1",
+      "node-html-parser": "^5.3.3",
+      "tough-cookie": "^4.0.2"
+   },
+   "devDependencies": {
+      "@rollup/plugin-commonjs": "^25.0.7",
+      "@rollup/plugin-node-resolve": "^15.2.3",
+      "@rollup/plugin-terser": "^0.4.4",
+      "rollup": "^3.29.4"
+   },
+   "module": "dist/index.esm.js"
+}
