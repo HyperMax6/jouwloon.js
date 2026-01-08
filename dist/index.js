@@ -35,7 +35,11 @@ class JouwloonSession {
 
    async getShifts(start, end) {
       try {
-         return await getCalendar(this.session, start, end);
+         return await getCalendar(
+            this.session,
+            formatDate(new Date(start)),
+            formatDate(new Date(end))
+         );
       } catch (err) {
          return err;
       }
@@ -47,6 +51,15 @@ class JouwloonSession {
          return console.log('No errors found, session valid');
       console.error(response.errors);
    }
+}
+
+function formatDate(date) {
+   const pad = (n) => String(n).padStart(2, '0');
+   return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
+      date.getDate()
+   )}T${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(
+      date.getSeconds()
+   )}`;
 }
 
 const validateSession = async (session) => {
