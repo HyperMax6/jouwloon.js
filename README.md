@@ -1,4 +1,4 @@
-# Jouwloon-JS
+# jouwloon.js
 
 A small helper that logs into Jouwloon.nl and fetches your shifts.
 > This library is completely unofficial. As such I do not take any responsibility upon it's usage.
